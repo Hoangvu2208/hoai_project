@@ -4,6 +4,7 @@
 
 /* ps:// co the thay ten cua cac file , sau do sua lai link hinh anh , ten san pham va gia theo project tong  */
 
+/* cai thong so co ban cho trang  */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,18 +23,51 @@ html::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 0.5rem;
 }
+/* cho nay la css cua hieu ung load trangs */
+.loading{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 1s ease-in-out;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.loading img {
+  width: 100px;
+  height: 100px;
+}
+.loading p {
+  font-size: 1rem;
+  color: #e99e13;
+}
+
+/* chinh hieu ung hover cho hinh anh  */
+img{
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+img:hover{
+  top: -0.1rem;
+  box-shadow: .5rem .2rem .5rem #9c7055;
+}
 
 .text-white{
   color: white;
 }
 
+/* set phan thuong hieu the coffe house + heart */
 .brand{
   background-color: #9c7055;
   font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  
 
 }
 .brand a{
@@ -52,12 +86,17 @@ html::-webkit-scrollbar-thumb {
 .brand a:hover{
   color:rgb(245, 173, 117) ;
 }
+
+/* //chinh kich thuc cho navbar */
+
 .navbar {
   font-size: 1.5rem;
 }
 .navbar-brand{
   font-size: 2rem !important;
 }
+
+/* phan nay la phan hien thi cua san pham  */
 
 .product_title{
   font-family: 'Island Moments', cursive;
@@ -73,16 +112,63 @@ html::-webkit-scrollbar-thumb {
   box-shadow: .1em .1em 0 hsl(200 50% 30%) !important;
 }
 
-
-#cold-coffee{
-  background-color: #9c7055;
+button:hover{
+  background-color: #c07140 !important;
+  border: none;
 }
 
+/* //phan nay la phan bieu thi thong so  */
+
+.counter-box {
+display: block;
+background: #f6f6f6;
+padding: 40px 20px 37px;
+text-align: center
+}
+
+.counter-box p {
+margin: 5px 0 0;
+padding: 0;
+color: #909090;
+font-size: 18px;
+font-weight: 500
+}
+
+.counter-box i {
+font-size: 60px;
+margin: 0 0 15px;
+color: #d2d2d2
+}
+
+.counter { 
+display: block;
+font-size: 32px;
+font-weight: 700;
+color: #666;
+line-height: 28px
+}
+
+
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+color: #fff
+}
+
+#cold-coffee{
+  background: linear-gradient(#f09935ec, #d860e7);
+  color: #c07140;
+}
+#cold-coffee .product_title{
+  color:white;
+}
 
 
 /* phan nay dug de chinh kich co cho phuf hop voi man hinh dien thoai */
 @media only screen and (max-width: 600px) {
   .brand{
     font-size: 2rem;
+    height: 12vh;
   }
 }

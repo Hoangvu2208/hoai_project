@@ -31,14 +31,20 @@
     <title>Coffee-menu</title>
   </head>
   <body>
+    <!-- cai nay dung de loading truoc khi tai trang -->
+    <div class="loading" id="loading">
+      <img src="cafe.svg" alt="" />
+      <p>外語ビジネス専門学校</p>
+    </div>
     <header>
+      <!-- Brand -->
       <div class="brand">
         <a href="#">THE COFFE HOUSE <i class="fa fa-heart"></i></a>
       </div>
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Our menu</a>
+            <a class="navbar-brand" href="#">Our menu </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -60,6 +66,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="TEA.html">Tea & Cakes</a>
                 </li>
+                <!-- dropdown list  -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -94,15 +101,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="TEA.html">Contact</a>
                 </li>
+
               </ul>
             </div>
           </div>
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main" class="main">
       <!-- danh sach san pham  -->
-      <secttion class="mt-5 product" id="hot-coffee">
+      <section class="mt-5 product" id="hot-coffee">
         <!-- tieu de cua loai san pham -->
         <h2 class="product_title">Hot coffee</h2>
         <div
@@ -118,9 +126,9 @@
                 <h6 class="mt-0 text-black-50">Black & Hot</h6>
                 <button
                   type="button"
-                  class="btn btn-outline-primary border-0 my-4"
+                  class="btn btn-outline-primary border-1 my-4 btn-custom"
                 >
-                  <b>Order</b>
+                  <b>Order now</b>
                 </button>
               </div>
             </div>
@@ -196,8 +204,9 @@
             </div>
           </div>
         </div>
-      </secttion>
-      <secttion class="mt-5 product" id="cold-coffee">
+      </section>
+      <!-- Cold Coffee section start -->
+      <section class="mt-5 product" id="cold-coffee">
         <!-- tieu de cua loai san pham -->
         <h2 class="product_title">Cold coffee</h2>
         <div
@@ -285,9 +294,42 @@
             </div>
           </div>
         </div>
-      </secttion>
+      </section>
+      <!-- Counter Start  -->
+      <section class="counter">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <span class="counter">2147</span>
+                <p>Happy Customers</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <span class="counter">3275</span>
+                <p>Registered Members</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <span class="counter">289</span>
+                <p>Available Products</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <span class="counter">1563</span>
+                <p>Saved Trees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <!-- viet lai noi dung voi web's map o day nhe  -->
+    <!-- Footer Sttar -->
     <footer>
       <div class="row my-5 justify-content-center">
         <div class="col text-center">
@@ -303,7 +345,7 @@
                   </p>
                   <button
                     type="button"
-                    class="btn btn-outline-primary border-0 my-4"
+                    class="btn btn-outline-primary border-1 my-4 btn-custom"
                   >
                     <b>Get in Touch</b></button
                   ><br />
@@ -320,7 +362,7 @@
               <h5>
                 <span>
                   <i
-                    class="fa fa-firefox text-light"
+                    class="fa fa-firefox text-dark"
                     aria-hidden="true"
                   ></i></span
                 ><b> The Coffee House</b>
@@ -364,10 +406,26 @@
       </div>
     </footer>
 
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- bootstrap (thu vien css ngoai) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      //  hoat anh load trangs
+      "use strict";
+      $(window).load(function () {
+        $("#loading")
+          .delay(1200)
+          .fadeOut("slow", function () {
+            $("body").removeClass("loading");
+          });
+      });
+    </script>
   </body>
 </html>
