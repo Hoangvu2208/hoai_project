@@ -1,240 +1,88 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Unbounded&display=swap');
+
+
+/* ps:// co the thay ten cua cac file , sau do sua lai link hinh anh , ten san pham va gia theo project tong  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+html::-webkit-scrollbar {
+  width: 0.6rem;
+}
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+.text-white{
+  color: white;
+}
+
+.brand{
+  background-color: #9c7055;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
+.brand a{
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 1px #919191,
+  1px 2px 1px #919191,
+  1px 3px 1px #919191,
+  1px 4px 1px #919191,
+  1px 5px 1px #919191,
+  1px 6px 1px #919191,
+1px 18px 6px rgba(16,16,16,0.4),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.4);
+}
+.brand a:hover{
+  color:rgb(245, 173, 117) ;
+}
+.navbar {
+  font-size: 1.5rem;
+}
+.navbar-brand{
+  font-size: 2rem !important;
+}
+
+.product_title{
+  font-family: 'Island Moments', cursive;
+
+  font-size: 5rem;
+  font-weight: bold;
+  
+}
+.card{
+  margin: 1rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: .1em .1em 0 hsl(200 50% 30%) !important;
+}
+
+
+#cold-coffee{
+  background-color: #9c7055;
 }
 
 
 
-.text-while{
-    color: white !important;
-}
-
-html{
-    font-family: 'Chilanka', cursive;
-    
-}
-
-.clear{
-    clear: both;
-}
-
-#home{
-    font-size: 30px;
-    text-align: center;
-}
-.tex-center{
-    text-align: center;
-}
-
-.col{
-    float: left;
-    padding: 0 8px;
-}
-
-.col-half{
-    width: 50%;
-}
-
-.col-third{
-    width: 33.33333%;
-}
-
-.col-four{
-    width: 25%;
-}
-
-.col-five{
-    width: 20%;
-}
-/* header*/
-#header{
-    height: 130px;
-    max-width: 100%;
-    background-color:#6a4731;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    }
-    
-    .house a{
-        max-width: 100%;
-        text-align: center;
-        color: #fff;
-        font-size: 50px;
-        text-decoration: none;
-    }
-    
-    .house > li{
-        list-style-type: none;
-    }
-    
-    #nav{
-    padding-top: 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 20px;
-    
-    }
-    
-    #nav .subnav{
-        list-style-type: none;
-    
-    }
-    
-    
- #home{
-    font-family: 'Rampart One', cursive;
-     font-size: 45px !important;
-}
-    
-#nav > li{
-     display: inline-block;  
-}
-    
-    
-#nav li{
-     position: relative;
-}
-    
-#nav> li> a{
-     color: #fff;
-    text-transform: uppercase;
- }
-#nav li a i[class*=fa-]{
-     padding-right: 5px;
- }  
- #nav li a i[class*=list]{
-    padding-left: 5px;
-}
-
-#nav li a {
-    text-decoration: none;
-    line-height: 47px;
-    padding: 0 24px;
-    display: block;    
-}
-#nav >li:hover >a{
-     color: black;
-     background-color: #9c7055;
- }
- #nav > li:hover .subnav{
-     display: block;
-}
-    
-#nav .subnav{
-     display: none;
-     position: absolute;
-     background-color: #9c7055;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-    
-#nav .subnav a{
-    color:#fff;
-    padding: 0 17px;
-    margin: 0 82px 0 0;
-}
-
-#nav .subnav a:hover{
-    color: #000;
-}
-
-#nav .subnav li:hover{
-    background-color: #e0c0a9;
-}
-    
-#nav .ti-home{
-    font-size: 15px;
-    padding-right: 2px;
-}  
-    
-/*conten*/
-.header-cf{
-    margin-top: 104px;
-    line-height: 170px;
-    max-width: 100%;
-    background-color: #fca553;
-    height: 200px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500px;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-    padding-top: 25px;
-
-}
-
-.menu-section{
-    margin-top: 104px;
-}
-
-.menu-cf img{
-    border: #000 solid 0.1px;
-   margin-left: 60px;
-   border-radius: 20px;
-}
-
-.menu-cf h2{
-    font-size: 40px;
-    margin-left:70px;
-    
-}
-
-.menu-content p{
-    margin-left: 60px;
-}
-
-.cafe{
-    height: 300px;
-    margin-bottom: 20px;
-}
-
-.cafe .menu-content{
-    margin-bottom: 20px;
-}
-
-.coldbrew .menu-content{
-    padding-top: 20px;
-}
-
-/*footer*/
-
-#footer{
-    height: 370px;
-	background-color: #9c7055;
-}
-
-#footer .about{
-    color: #fff;
-    text-align: center;
-    padding-top: 100px;
-    font-size: 35px;
-   
-}
-
-.about .icon i{
-    color: #e0c0a9;
-    font-size: 40px;
-
-}
-
-.about .icon i:hover{
-    opacity: 0.5;
-}
-
-#footer .map iframe{
-    margin-top: 50px;
-    border: #6a4731 solid 5px;
-    margin-left: 100px;  
-    border-radius: 15px;
-}
-
-.top a{
-    color: #e0c0a9;
-    font-size: 40px;
-    margin-right: 30px;
-    float: right;
-    
+/* phan nay dug de chinh kich co cho phuf hop voi man hinh dien thoai */
+@media only screen and (max-width: 600px) {
+  .brand{
+    font-size: 2rem;
+  }
 }
